@@ -2,13 +2,11 @@ import pandas as pd
 import numpy as np
 import os
 
-# ===================== 关键修改：本地路径配置 =====================
-# 原始数据集输入路径（需确保原始文件已放在该文件夹下）
-input_path = r'C:\Users\Administrator\Desktop\newmat\mix-halide-perovskite-ml-bandgap.csv'
-# 清洗后数据集输出路径（清洗后的文件会保存在同一文件夹，命名带"cleaned"标识）
-output_path = r'C:\Users\Administrator\Desktop\newmat\cleaned_mix-halide-perovskite-ml-bandgap.csv'
+# ===================== ATTENTION!本地路径配置 =====================
+input_path = r'YOUR FILE_PATH'
+output_path = r'YOUR FILE_PATH'
 
-# ===================== 数据清洗核心逻辑（保持不变） =====================
+# ===================== 数据清洗核心逻辑=====================
 # 1. 加载原始数据集并查看基本信息
 print("=== 步骤1：加载原始数据集 ===")
 # 检查原始文件是否存在，避免路径错误
@@ -110,4 +108,5 @@ try:
     print("\n=== 数据清洗任务全部完成！===")
 except Exception as e:
     print(f"保存文件失败！错误原因：{str(e)}")
+
     print("请检查目标文件夹是否有权限写入（如管理员权限）")
